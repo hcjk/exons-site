@@ -1,0 +1,1 @@
+{'text': 'Realistic cat', 'folder': '.\\results', 'resX': 512, 'resY': 512, 'half': 1, 'seed': 3387551785, 'origin': None, 'origin_W': None, 'steps': 500, 'vscale': 7.5, 'samples': 20000}

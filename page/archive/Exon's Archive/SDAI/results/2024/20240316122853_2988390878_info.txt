@@ -1,0 +1,1 @@
+{'text': 'Human', 'folder': '.\\results', 'resX': 384, 'resY': 384, 'half': 1, 'seed': 2988390878, 'origin': None, 'origin_W': None, 'steps': 500, 'vscale': 7.5, 'samples': 20000}
