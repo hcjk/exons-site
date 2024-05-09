@@ -1,1 +1,0 @@
-{'text': 'cat', 'folder': '.\\results', 'resX': 512, 'resY': 512, 'half': 1, 'seed': 2798885551, 'origin': None, 'origin_W': None, 'steps': 100, 'vscale': 7.5, 'samples': 1}
