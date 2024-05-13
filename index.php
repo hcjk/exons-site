@@ -1,20 +1,4 @@
 <?php include "header.php"; ?>
-
-<body>
-
-<div class="content">
-    <div class="nav">
-        <div class="logo">
-            <img src="images/logo.svg" alt="logo">
-        </div>
-        <div class="menu">
-            <a class="textcolor" href="https://dsc.gg">CHITAI</a>
-            <a class="textcolor" href="https://dsc.gg">SDAI</a>
-            <a class="textcolor" href="https://dsc.gg">Service's</a>
-            <a class="textcolor" href="https://dsc.gg">Safety</a>
-            <a class="textcolor" href="https://dsc.gg">Contact's</a>
-        </div>
-    </div>
     <div class="hero">
         <div class="hero-text">
             <h1 class="textcolor">Exon's Technologies</h1>
@@ -44,11 +28,11 @@
 
     </svg>
 
-    <!-- Noise effect applied to the bottom of the page -->
+    <!-- noise background -->
     <div class="backgr" style="position: fixed; bottom: 0; width: 100%; height: 100%; z-index: -1;">
         <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-color: #000000; filter: url(#noiseFilter); opacity: 0.2;"></div>
     </div>
 
 </div>
-
 <?php include "footer.php"; ?>
+</html>
