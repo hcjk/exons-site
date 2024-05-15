@@ -15,24 +15,45 @@
         </div>
     </div>
 
-    <svg>
-        <filter id='noiseFilter'>
-            <feTurbulence
-                    type='fractalNoise'
-                    baseFrequency='0.8'
-                    stitchTiles='stitch'/>
-            <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/>
-            <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
-            <feBlend in="SourceGraphic" in2="monoNoise" mode="screen"/>
-        </filter>
 
-    </svg>
+    <section class="section-content">
 
-    <!-- noise background -->
-    <div class="backgr" style="position: fixed; bottom: 0; width: 100%; height: 100%; z-index: -1;">
-        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-color: #000000; filter: url(#noiseFilter); opacity: 0.2;"></div>
+    <div class="section-image">
+        <img src="images/catai.png" alt="Adorable Cat"/>
     </div>
 
-</div>
-<?php include "footer.php"; ?>
+    <div class="section-titles">
+        <h1>Stable Diffusion Artificial Intelligence</h1>
+        <p>Input: Photo of an adorable cat.</p>
+        <p>The SDAI is a technology powered by Stable Diffusion Artificial Intelligence. This tool allows users to effortlessly convert text into image.</p>
+    </div>
+
+    </section>
+
+    <section class="section-content">
+
+    <div class="section-titles">
+        <h1>Stable Diffusion Artificial Intelligence</h1>
+        <p>Input: Photo of an adorable cat.</p>
+        <p>The SDAI is a technology powered by Stable Diffusion Artificial Intelligence. This tool allows users to effortlessly convert text into image.</p>
+    </div>
+
+    <div class="section-image">
+        <img src="images/catai.png" alt="Adorable Cat"/>
+    </div>
+
+    
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>
