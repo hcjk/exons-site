@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+    :root {
+  --bg: dark;
+  --text: white;
+  --yellow: cyan;
+  --red: white;
+  --green: blue;
+}
+
+* {
+padding: 0px 0px;
+margin: 0px 0px;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3em;
+background-color: black;
+  font-family: "Poppins";
+  
+  margin: 0 10em;
+}
+
+.context {
+flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 20px;
+    color: white;
+}
+
+.navsafety {
+background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-text p {
+    margin: 0;
+}
+
+.footer-images {
+    margin-top: 5px;
+}
+
+.footer-images img {
+    width: 300px;
+    height: 300px;
+    margin: 3px;
+}
+
+
+
+.small-images {
+    margin-top: 20px;
+}
+
+.small-images img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body::before,
+body::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  opacity: 40%;
+}
+
+
+/* Blobs */
+.blob-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  right: 5em;
+}
+
+
+.blob {
+  border-radius: 100px;
+  filter: blur(60px);
+}
+
+.yellow {
+  background-color: var(--yellow);
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  height: 200px;
+  width: 200px;
+  
+  animation: yellow 8s infinite ease;
+}
+
+.green {
+  background-color: var(--green);
+  position: absolute;
+  top: 80px;
+  right: -20px;
+  height: 200px;
+  width: 250px;
+  
+  animation: green 8s infinite ease;
+}
+
+.red {
+  background-color: var(--red);
+  position: absolute;
+  right: 0;
+  top: 300px;
+  height: 250px;
+  width: 200px;
+  
+  animation: red 8s infinite linear;
+}
+
+@keyframes yellow {
+  0% {top: 200px; left: 100px; transform: scale(1);}
+  30% {top: 300px; left: 150px; transform: scale(1.2);}
+  60% {top: 100px; left: 200px; transform: scale(1.3);}
+  100% {top: 200px; left: 100px; transform: scale(1);}
+}
+
+@keyframes green {
+  0% {top: 80px; right: -20px; transform: scale(1.2);}
+  30% {top: 300px; right: -20px;transform: scale(1);}
+  60% {top: 200px; right: 100px;transform: scale(1);}
+  100% {top: 80px; right: -20px; transform: scale(1.2);}
+}
+
+@keyframes red {
+  0% {top: 250px; right: 0px; transform: scale(1);}
+  30% {top: 150px; right: 150px;transform: scale(1.4);}
+  60% {top: 250px; right: 100px;transform: scale(1);}
+  100% {top: 250px; right: 0px; transform: scale(1);}
+}
+
+
+/* the rest of the page */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.textcolor {
+color: white;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3em;
+}
+
+.backgr {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 130%;
+  gap: 3em;
+  background:
+        linear-gradient(to right, white 1px, transparent 1px) 0 0,
+        linear-gradient(to right, white 1px, transparent 1px) 0 100%,
+        linear-gradient(to left, white 1px, transparent 1px) 100% 0,
+        linear-gradient(to left, white 1px, transparent 1px) 100% 100%,
+        linear-gradient(to bottom, white 1px, transparent 1px) 0 0,
+        linear-gradient(to bottom, white 1px, transparent 1px) 100% 0,
+        linear-gradient(to top, white 1px, transparent 1px) 0 100%,
+        linear-gradient(to top, white 1px, transparent 1px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+      
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2em;
+}
+
+.button {
+  padding: 1em 3em;
+  border: 1px solid white;
+  color: white;
+  font-size: 18px;
+border-radius: 20px;
+}
+
+.primary {
+  color: white;
+border-radius: 20px;
+}
+
+.primary:hover {
+  background-color: white;
+  color: black;
+border-radius: 20px;
+}
+
+.secondary {
+  color: white;
+border-radius: 20px;
+}
+
+.secondary:hover {
+  background-color: white;
+  color: black;
+border-radius: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    margin: 1em;
+  }
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-box {
+  width: 40%;
+  border-radius: 10px;
+}
+.image-box img {
+height: 100%;
+width: 100%;
+border-radius: 20px;
+box-shadow: rgba(52, 164, 235, 0.56) 0px 22px 70px 4px;
+}
+
+.image-boxx {
+  width: 40%;
+  border-radius: 10px;
+}
+.image-boxx img {
+height: 100%;
+width: 100%;
+border-radius: 20px;
+box-shadow: rgba(245, 191, 66, 0.56) 0px 22px 70px 4px;
+}
+
+
+.text-box {
+  width: 50%;
+}
+
+.text-box h1 {
+  font-size: 24px;
+}
+
+.text-box p {
+  font-size: 16px;
+  color: #333;
+}
+
+</style>
+  </head>
+</html>
+    <div class="content">
+<div class="nav">
+<div class="logo">
+<img src="images/logo.svg" alt="logo">
+</div>
+  <div class="menu">
+    <a class="textcolor" href="exon">CHITAI</a>
+    <a class="textcolor" href="exon">SDAI</a>
+    <a class="textcolor" href="exon">Service's</a>
+    <a class="textcolor" href="exon">Safety</a>
+    <a class="textcolor" href="exon">Contact's</a>
+  </div>
+</div>
+<div class="hero">
+  <div class="hero-text">
+    <h1 class="textcolor">Exon's Technologies</h1>
+    <p class="textcolor">Let's make the future even brighter with Artificial Intelligence, Design & more...</p>
+    <div class="buttons">
+      <a class="button primary" href="https://dribbble.com/shots/21248617-Daily-Design-Code-3-Grainy-Gradients-Blurry-Background" target="_blank">Service's</a>
+      <a class="button secondary" href="https://dsc.gg/exonui" target="_blank">Discord Server</a>
+    </div>
+  </div>
+  <div class="blob-cont">
+    <div class="yellow blob"></div>
+    <div class="red blob"></div>
+    <div class="green blob"></div>
+  </div>
+</div>
+
+<svg>
+  <filter id='noiseFilter'>
+    <feTurbulence 
+      type='fractalNoise' 
+      baseFrequency='0.8' 
+      stitchTiles='stitch'/>
+     <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+        <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+  </filter>
+  
+</svg>
+
+    <!-- Noise effect applied to the bottom of the page -->
+    <div class="backgr" style="position: fixed; bottom: 0; width: 100%; height: 100%; z-index: -1;">
+        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-color: #000000; filter: url(#noiseFilter); opacity: 0.2;"></div>
+    </div>
+
+    </div>
+<footer style="display: flex; justify-content: center;">
+  <div class="image-box" style="flex: 1;">
+    <img src="images/catai.png" alt="Adorable Cat" />
+  </div>
+  <div class="text-box" style="flex: 2; text-align: center; margin: 70px;">
+    <h1 style="color: #03b6fc;">Stable Diffusion Artificial Intelligence</h1>
+    <p style="color: white;">Input: Photo of an adorable cat.</p>
+    <p style="color: white;">The SDAI is a technology powered by Stable Diffusion Artificial Intelligence. This tool allows users to effortlessly convert text into image.</p>
+  </div>
+    </footer>
+<footer>
+<footer style="display: flex; justify-content: center;">
+  <div class="text-box" style="flex: 2; text-align: center; margin: 70px;">
+    <h1 style="color: #03b6fc;">CHITAI</h1>
+    <p style="color: white;">Artificial Intelligence Chat Bot</p>
+    <p style="color: white;">The CHITAI is still developing. This might take some time. Soo while waiting drink some coffee.</p>
+  </div>
+  <div class="image-boxx" style="flex: 1;">
+    <img src="images/mugai.png" alt="Coffee mug" />
+  </div>
+    </footer>
+<iframe src="https://discordapp.com/widget?id=1150306662821933117&theme=dark" width="500" height="350" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+<footer>
+        <div class="footer-text">
+            <p>"Exon's Tech" is not part of "OpenAI"</p>
+            <p>© Exon's Technologies All rights reserved, 2024.</p>
+            <p>developed by nerds.</p>
+        </div>
+        <div class="footer-images">
+            <a href="#"><img src="images/both.svg" alt="Image 1"></a>
+        </div>
+        <div class="small-images">
+            <a href="https://dsc.gg/exonui"><img src="images/discord.png" alt="Discord"></a>
+            <a href="#"><img src="images/x.png" alt="Small Image 2"></a>
+            <a href="#"><img src="images/youtube.png" alt="Small Image 3"></a>
+            <a href="https://www.reddit.com/r/exon/"><img src="images/reddit.png" alt="Small Image 4"></a>
+        </div>
+    </footer>
